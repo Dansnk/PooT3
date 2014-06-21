@@ -72,7 +72,7 @@ public class PhysicsLabApplet extends JApplet
         //Get the applet parameters.
         loadAppletParameters(); 
 	   	String at = getParameter("ball.1");
-	   	String delimitadores= "[ .,;?!¡¿\'\"\\[\\]]+";
+	   	String delimitadores= "[ .,;?!\'\"\\[\\]]+";
 	   	String[] palabrasSeparadas = at.split(delimitadores);
 	   //Float.valueOf(palabrasSeparadas[0]
         

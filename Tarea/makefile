@@ -1,13 +1,10 @@
 JFLAGS = -g
 JC = javac
 JVM = java
-JAR = jar
-JDOC = javadoc
-APPV = appletviewer
 
-.SUFFIXES: .java .class .html .jar
+.SUFFIXES: .java .class
 .java.class:
-	$(JC) $(JFLAGS) '.:jmathplot.jar' $*.java
+	$(JC) $(JFLAGS) -cp '.:jmathplot.jar' $*.java
 .class.jar:
 	$(JAR) PhysicsLabApplet.jar *.class menuhit.wav
 	
@@ -19,23 +16,18 @@ CLASSES = \
 	Graphview.java \
 	LabMenuListener.java \
 	MouseListener.java \
-    MyWorld.java \
+    	MyWorld.java \
 	MyWorldView.java \
 	NextKeyListener.java \
 	Oscillator.java \
 	OscillatorView.java \
-    PhysicsElement.java \
+    	PhysicsElement.java \
 	PhysicsLab.java \
 	PhysicsLabApplet.java \
 	Simulateable.java \
-	Spring.java \:
+	Spring.java \
 	SpringView.java \
 	SpringAttachable.java \
-
-MAIN = PhysicsLabApplet
-MAINC = $(MAIN).class
-MAINJ = $(MAIN).jar
-MAINH = PhysicsLab
 
 default: classes
 
@@ -43,16 +35,12 @@ classes: $(CLASSES:.java=.class)
 
 jar: $(MAINC:.class=.jar)
 
-run:	 
-	javac PhysicsLab.java
-	java  PhysicsLab
+run:	
+	java  -cp '.:jmathplot.jar' PhysicsLab
 	
-runApplet: $(MAIN).class 
-		   $(APPV) $(MAINH).html
+runApplet: 
+	appletviewer PhysicsLabApplet.html
 
 clean:
-	$(RM) *.class
+	$(RM) *.class PhysicsLab.jar
 	$(RM) *.jar
-
-doc:
-	$(JDOC) $(CLASSES) 

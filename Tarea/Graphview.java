@@ -22,13 +22,13 @@ public class Graphview extends Plot2DPanel{
 		 world = w;
 		 choice = pick;
 		 if(choice == 1){
-			 title = new BaseLabel("Energía Cinética",Color.BLACK, 0.5, 1.1);			 
+			 title = new BaseLabel("Energia Cinetica",Color.BLACK, 0.5, 1.1);			 
 		 }
 		 if(choice == 2){
-			 title = new BaseLabel("Energía Potencial",Color.BLACK, 0.5, 1.1);			 
+			 title = new BaseLabel("Energia Potencial",Color.BLACK, 0.5, 1.1);			 
 		 }
 		 if(choice == 3){
-			 title = new BaseLabel("Energía Mecánica", Color.BLACK, 0.5, 1.1);			 
+			 title = new BaseLabel("Energia Mecanica", Color.BLACK, 0.5, 1.1);			 
 		 }
 		 this.addPlotable(title);
 	     title.setFont(new Font("Courier", Font.BOLD, 20));

@@ -97,12 +97,6 @@ http://www.java.com/
 	
 	Para la generacion de los correspondientes jar se puede usar el comando:
 	$make jar
-	
 
-6.- Resultados:
-   ===========
-
-	El resultado al ejecutar este programa se mostrara una interfaz grafica en donde podremos escoger los elementos desde un menu, 
-	y con el puntero del mouse y presionando el boton primario de este, podremos mover los objetos y engancharlos a los springs
 
 
